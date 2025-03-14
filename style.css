@@ -15,7 +15,8 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 500px; /* Increased width */
+    max-width: 90%; /* Make it responsive for smaller screens */
 }
 
 /* List styling */
@@ -103,7 +104,7 @@ button.add-btn:hover {
 /* Responsive design for small screens */
 @media (max-width: 480px) {
     .container {
-        width: 90%;
+        width: 90%; /* Reduce the width on smaller screens */
         padding: 15px;
     }
 
