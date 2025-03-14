@@ -9,10 +9,18 @@
 <body>
     <div class="container">
         <h2>Todo List</h2>
-        <input type="text" id="taskInput" placeholder="Add a new task">
-        <button onclick="addTask()">Add</button>
+        
+        <!-- Input for adding new tasks -->
+        <input type="text" id="taskInput" placeholder="Enter a new task" aria-label="Task description">
+        <input type="datetime-local" id="deadlineInput" aria-label="Task deadline"> <!-- Deadline input -->
+        
+        <!-- Button to add new task -->
+        <button class="add-btn" onclick="addTask()">Add Task</button>
+        
+        <!-- Task list will appear here -->
         <ul id="taskList"></ul>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

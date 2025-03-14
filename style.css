@@ -1,3 +1,4 @@
+/* Basic body styling */
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -5,7 +6,10 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #f4f4f4;
+    margin: 0;
 }
+
+/* Container for the todo app */
 .container {
     background: white;
     padding: 20px;
@@ -13,32 +17,108 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
 }
+
+/* List styling */
 ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
+
+/* List item styling */
 li {
     display: flex;
     justify-content: space-between;
     padding: 8px;
     border-bottom: 1px solid #ddd;
+    align-items: center;
 }
-button {
-    cursor: pointer;
-    border: none;
-    padding: 5px;
-    border-radius: 3px;
-}
-.delete-btn {
-    background-color: red;
-    color: white;
-}
-.edit-btn {
-    background-color: blue;
-    color: white;
-    margin-right: 5px;
-}
+
+/* Completed task style */
 .completed {
     text-decoration: line-through;
     color: gray;
+    opacity: 0.7; /* Slight opacity to differentiate completed tasks */
+}
+
+/* Deadline styling */
+.deadline {
+    font-style: italic;
+    color: #666;
+}
+
+/* Button base styling */
+button {
+    cursor: pointer;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+/* Edit button styling */
+.edit-btn {
+    background-color: #3498db; /* Blue color for Edit */
+    color: white;
+    margin-right: 5px;
+}
+
+.edit-btn:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Delete button styling */
+.delete-btn {
+    background-color: #e74c3c; /* Red color for Delete */
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+/* Input fields and add button styling */
+input[type="text"],
+input[type="datetime-local"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button.add-btn {
+    background-color: #2ecc71; /* Green color for Add */
+    color: white;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+button.add-btn:hover {
+    background-color: #27ae60; /* Darker green on hover */
+}
+
+/* Responsive design for small screens */
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .edit-btn, .delete-btn {
+        width: 100%;
+        margin-right: 0;
+    }
 }
